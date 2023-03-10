@@ -1,0 +1,106 @@
+.s-services .ss-top .sst-txt p span {
+    color: #009846;
+    font-weight: bold;
+}
+
+.s-about .sa-low p {
+    margin: 0;
+    color: #1E2D26;
+    font-size: 14px;
+    line-height: 130%;
+    font-family: "Roboto-Regular", sans-serif;
+    margin-bottom: 6px;
+}
+.s-about .sa-block {
+    margin-top: 45px;
+}
+footer .ft-third .ftt-company {
+
+    right: 5px;
+}
+footer .ft-third .ftt-company:hover {
+    right: 0px;
+}
+
+.has-error {
+    border: 1px solid red!important;
+}
+
+.btn{
+    cursor: pointer;
+    outline: none;
+}
+.link{
+    cursor: pointer;
+}
+
+
+.btn[disabled]{
+    background: #d4d4d4;
+    color: #b1b1b1;
+    border: #333;
+}
+
+.FLresult {
+    padding: 0px 0 0px;
+    font-size: 18px;
+}
+
+.FLresult .error {
+    color: red;
+}
+
+.FLresult .sent {
+    color: #005aff;
+}
+
+.main-slider .header-form {
+    max-width: 255px;
+    width: 100%;
+    position: relative;
+}
+
+.main-slider .header-form .ftt-inp {
+    margin-bottom: 7px;
+}
+
+.main-slider .header-form .ftt-inp input {
+    display: block;
+    width: 100%;
+    outline: none;
+    color: #1E2D26;
+    font-size: 14px;
+    line-height: 28px;
+    height: 41px;
+    font-family: "Roboto-Regular", sans-serif;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 15px;
+}
+.main-slider .header-form button.btn-header-form {
+    margin-bottom: 38px!important;
+    margin-top: 13px;
+}
+header .h-mnu li.h-with-sub .hws-ul li a:hover{
+	text-decoration: underline;
+}
+footer .ft-third .ftt-company-grechka{
+    float: left;
+    display: block;
+    bottom: -10px;
+    position: absolute;
+    right: 165px;
+}
+footer .ft-third .ftt-company-grechka svg{
+    width: 115px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+footer .ft-third .ftt-company-grechka {
+    display: none;
+}
+}       
