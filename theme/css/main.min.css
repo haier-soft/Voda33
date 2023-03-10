@@ -2796,12 +2796,13 @@ header .h-phone:hover {
 }
 
 .main-slider .swiper-container .ms-itm .ms-i-descr {
-  min-height: 111px;
+  min-height: 101px;
   font-size: 18px;
   line-height: 150%;
   font-family: "Fira Sans", sans-serif;
   text-transform: uppercase;
   padding-top: 20px;
+  margin-bottom: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
