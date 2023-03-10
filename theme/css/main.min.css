@@ -2740,9 +2740,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-header {
-  padding-top: 61px;
-}
+
 header .my-container {
   max-width: 1140px;
 }
@@ -3431,7 +3429,7 @@ footer .ft-third .ftt-inp input {
 }
 
 .ft-products {
-  padding: 26px 0 20px;
+  padding: 17px 0 50px;
 }
 .ft-products__title {
   max-width: 676px;
