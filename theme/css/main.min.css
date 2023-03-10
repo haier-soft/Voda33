@@ -4555,19 +4555,12 @@ footer .ft-third .ftt-inp input {
   header .h-phone {
     width: 170px;
   }
-  .s-our-services .sos-items .sos-itm .sos-circle {
-    width: 187px;
-    height: 187px;
-  }
 
   .s-our-services .sos-items .sos-circle .sos-c-descr {
     font-size: 14px;
     line-height: 150%;
   }
 
-  .s-our-services .sos-items .sos-itm .sos-circle .btn {
-    display: none;
-  }
 
   .s-form .my-container.sf-items .sf-itm .sfi-descr {
     font-size: 14px;
