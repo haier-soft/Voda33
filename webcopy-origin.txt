@@ -3,7 +3,7 @@ File Name: C:\Downloaded Web Sites\voda33.su\watch\57288943
 Content Type: image/gif
 
 Uri: https://voda33.su/
-File Name: C:\Downloaded Web Sites\voda33.su\index.htm
+File Name: C:\Downloaded Web Sites\voda33.su\main.htm
 Content Type: text/html
 
 Uri: https://voda33.su/assets/cache/images/01circles-servive-130x130-80c.png
@@ -118,8 +118,8 @@ Uri: https://voda33.su/sistemi-vodopodqotovki.html
 File Name: C:\Downloaded Web Sites\voda33.su\sistemi-vodopodqotovki.html
 Content Type: text/html
 
-Uri: https://voda33.su/o-kompanii.html
-File Name: C:\Downloaded Web Sites\voda33.su\o-kompanii.html
+Uri: https://voda33.su/company.html
+File Name: C:\Downloaded Web Sites\voda33.su\company.html
 Content Type: text/html
 
 Uri: https://voda33.su/obustrojstvo-skvazhin-na-vodu.html
