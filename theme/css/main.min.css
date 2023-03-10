@@ -3092,9 +3092,10 @@ footer .ft-third .ftt-inp input {
 }
 
 .s-services .ss-middle .ssm-items .ssm-itm .ssm-hdr {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 18px;
   letter-spacing: normal;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
   line-height: 130%;
 }
 
