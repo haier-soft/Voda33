@@ -104,3 +104,12 @@ footer .ft-third .ftt-company-grechka {
     display: none;
 }
 }       
+
+
+/*******************************/
+/*redesign styles*/
+.FLresult .error {
+    color: #CC4F27;
+    font-size: 12px;
+    margin-top: 8px;
+}
