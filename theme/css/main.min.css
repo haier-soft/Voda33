@@ -5588,10 +5588,10 @@ opacity: 0.8;
 
   .main-slider .swiper-container .ms-itm .h1 {
     font-size: 30px;
-    line-height: 130%;
+    line-height: 110%;
     margin-bottom: 19px;
     margin-top: 10px;
-    min-height: 78px;
+    min-height: 66px;
   }
   .main-slider .swiper-container .ms-itm .ms-i-p {
     min-height: 72px;
