@@ -3344,7 +3344,7 @@ opacity: 0.5;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px 30px;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 .wisewater__footer {
   margin-bottom: 50px;
