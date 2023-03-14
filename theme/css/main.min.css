@@ -2664,8 +2664,9 @@ footer .ft-third .btn {
 }
 
 .txt-short {
+  font-size: 14px;
+  line-height: 150%;
   max-width: 635px;
-  font-weight: 300;
 }
 
 .txt-short-bold {
@@ -2955,7 +2956,6 @@ footer .ft-first .ft-p {
   font-size: 12px;
   line-height: 150%;
   color: #737373;
-  opacity: 0.5;
   margin: 18px 0 0 0;
 }
 
@@ -3336,11 +3336,6 @@ opacity: 0.5;
 .wisewater__header h1 {
   margin-bottom: 16px;
 }
-.wisewater__desc {
-  font-size: 14px;
-  max-width: 636px;
-  line-height: 150%;
-}
 .wisewater__items {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -3352,6 +3347,7 @@ opacity: 0.5;
 }
 .wisewater .txt-short {
   margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .item-wisewater {
@@ -3587,7 +3583,6 @@ opacity: 0.5;
 .item-product__subtitle {
   font-size: 12px;
   color: #737373;
-  opacity: 0.7;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -3602,8 +3597,8 @@ opacity: 0.5;
   color: #1E2D26;
 }
 .item-product:hover {
-  -webkit-box-shadow: 0px 4px 10px rgba(30, 45, 38, 0.15);
-          box-shadow: 0px 4px 10px rgba(30, 45, 38, 0.15);
+  -webkit-box-shadow: 0px 4px 10px rgba(30, 45, 38, 0.25);
+          box-shadow: 0px 4px 10px rgba(30, 45, 38, 0.25);
 }
 
 .ft-products {
@@ -3615,9 +3610,7 @@ opacity: 0.5;
   margin: 0;
 }
 .ft-products .txt-short {
-  opacity: 0.5;
   margin: 12px 0;
-  font-weight: 400;
 }
 /*product-page*/
 .product h1 {
@@ -5530,9 +5523,6 @@ opacity: 0.5;
 
   footer .ft-first .ft-p {
     margin: 0;
-    color: #1E2D26;
-
-opacity: 0.8;
   }
 
   footer .ft-second {
@@ -5576,13 +5566,6 @@ opacity: 0.8;
   body {
     font-size: 12px;
   }
-
-  .txt-short {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-  }
-
 
   header .h-mnu {
     right: 22px;

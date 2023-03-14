@@ -151,30 +151,30 @@ function formRemoveError(item) {
  
 }
 window.addEventListener("scroll", () => {
-  let windowTop = window.pageYOffset;
+  let windowTop = window.pageYOffset || document.documentElement.scrollTop;
   let animate = document.querySelectorAll(".animate");
   animate.forEach(item => {
-    if (!item.classList.contains("animated")) {
-      item.style.cssText += "opacity:0"
-    }
     function offset(item) {
       let rect = item.getBoundingClientRect();
-      let scrollLeft = window.pageXOffsetLeft || document.documentElement.scrollLeft;
-      let scrollTop = window.pageYOffsetLeft || document.documentElement.scrollTop;
-      return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+      return rect.top
     }
-    let itemTop = offset(item).top;
+    let animation = item.getAttribute("data-animation");
+    let itemTop = offset(item) + windowTop;
     let itemPoint = Math.abs(window.innerHeight - item.offsetHeight * 0.5);
     if (item.offsetHeight === undefined) {
       let itemParent = item.parentNode;
       itemPoint = window.innerHeight - itemParent.offsetHeight / 2;
     }
     if (windowTop > itemTop - itemPoint) {
-      let animation = item.getAttribute("data-animation");
       item.style.opacity = "1"
-      //item.style.cssText += `animation-name: ${animation}; animation-fill-mode: both;animation-timing-function: ease-out;`
       item.classList.add(animation);
       item.classList.add("animated");
+    } else if (window.innerHeight < offset(item) ) {
+      item.style.cssText += "opacity:0"
+      item.classList.remove(animation);
     }
   })
 })
+
+
+
