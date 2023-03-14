@@ -4094,6 +4094,9 @@ opacity: 0.5;
 .form-pickup .form-pickup__inp--number {
   max-width: 177px;
 }
+.form-pickup__item.error .form-pickup__inp {
+  border: 1px solid #CC4F27;
+}
 .form-pickup__item.error .form-pickup__item__error {
   display: block;
 }
