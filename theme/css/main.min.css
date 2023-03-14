@@ -5671,7 +5671,7 @@ opacity: 0.5;
   }
 }
 @media only screen and (max-width: 370px) {
-.main-slider  .ms-wrap-dots {
+.main-slider .swiper-container .ms-itm .ms-wrap-dots {
   display: block;
 }
 }
@@ -6043,13 +6043,7 @@ opacity: 0.5;
             .advtg-product__item svg {
               width: 70px;
               height: 70px;
-            }
-        
-        
-        
-      
-    
-  
+            }  
 }
 @media only screen and (max-width: 600px) {
   .top-products {
