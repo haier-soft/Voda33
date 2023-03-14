@@ -60,6 +60,9 @@ if (document.querySelector(".info-product")) {
         })
         switchItemMobile[idx].classList.add("active")
         switchBlock[idx].classList.add("active")
+      } else {
+        switchItemMobile[idx].classList.remove("active")
+        switchBlock[idx].classList.remove("active")
       }
     })   
   })
