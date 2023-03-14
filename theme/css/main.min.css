@@ -5423,6 +5423,9 @@ opacity: 0.5;
   }
 }
 @media only screen and (max-width: 992px) {
+    .s-not-found {
+      padding-top: 45px;
+    }
   .main-slider .swiper-container .ms-itm .ms-i-descr {
     min-height: 111px;
   }
