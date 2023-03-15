@@ -2170,10 +2170,6 @@ footer .ft-third .btn {
   color: rgba(30, 45, 38, 0.5);
 }
 
-.cb-wrap {
-  /* Create a custom checkbox */
-}
-
 .cb-wrap .container {
   display: block;
   position: relative;
@@ -5660,15 +5656,7 @@ opacity: 0.5;
     min-height: 72px;
   }
 }
-<<<<<<< HEAD
 
-=======
-@media only screen and (max-width: 376px) {
-  .main-slider .swiper-container .ms-itm {
-    padding-top: 87px;
-}
-}
->>>>>>> 3ff1ead784021ed10732787f8bc2ae2ba7d47b8d
 @media only screen and (max-width: 370px) {
 .main-slider .swiper-container .ms-itm .ms-wrap-dots {
   display: block;
