@@ -3803,6 +3803,16 @@ opacity: 0.5;
 .block-info__list {
   margin-bottom: 40px;
 }
+.block-info__list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.block-info__list li::before{
+  content: "🢒";
+  margin-right: 5px
+}
 .block-info__images {
   display: -webkit-box;
   display: -ms-flexbox;
