@@ -4094,6 +4094,9 @@ opacity: 0.5;
 .form-pickup .form-pickup__inp--number {
   max-width: 177px;
 }
+.form-pickup__item.error .form-pickup__inp {
+  border: 1px solid #CC4F27;
+}
 .form-pickup__item.error .form-pickup__item__error {
   display: block;
 }
@@ -5574,20 +5577,15 @@ opacity: 0.5;
     right: 22px;
   }
 
-  .main-slider .swiper-container .ms-itm {
-    padding-top: 125px;
-  }
-
   .main-slider .swiper-container .ms-itm .h1 {
     font-size: 24px;
     line-height: 120%;
     font-weight: 400;
-    margin-bottom: 19px;
     margin-top: 10px;
     min-height: 58px;
   }
   .main-slider .swiper-container .ms-itm .ms-i-p {
-    min-height: 72px;
+    min-height: 54px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5657,6 +5655,17 @@ opacity: 0.5;
 
 
 }
+@media only screen and (max-width: 400px) {
+  .main-slider .swiper-container .ms-itm .ms-i-p {
+    min-height: 72px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+.main-slider .swiper-container .ms-itm .ms-wrap-dots {
+  display: block;
+}
+}
 @media only screen and (max-width: 350px) {
   footer .ft-second .fts-line {
     width: 100%;
@@ -5670,11 +5679,7 @@ opacity: 0.5;
             justify-content: center;
   }
 }
-@media only screen and (max-width: 370px) {
-.main-slider  .ms-wrap-dots {
-  display: block;
-}
-}
+
 @media only screen and (max-width: 320px) {
   h2 {
     font-size: 20px;
@@ -6043,13 +6048,7 @@ opacity: 0.5;
             .advtg-product__item svg {
               width: 70px;
               height: 70px;
-            }
-        
-        
-        
-      
-    
-  
+            }  
 }
 @media only screen and (max-width: 600px) {
   .top-products {
