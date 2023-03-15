@@ -5586,7 +5586,7 @@ opacity: 0.5;
     min-height: 58px;
   }
   .main-slider .swiper-container .ms-itm .ms-i-p {
-    min-height: 72px;
+    min-height: 54px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5655,6 +5655,11 @@ opacity: 0.5;
   }
 
 
+}
+@media only screen and (max-width: 400px) {
+  .main-slider .swiper-container .ms-itm .ms-i-p {
+    min-height: 72px;
+  }
 }
 @media only screen and (max-width: 350px) {
   footer .ft-second .fts-line {
