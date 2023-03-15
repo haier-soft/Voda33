@@ -2673,7 +2673,14 @@ footer .ft-third .btn {
   color: #737373;
   letter-spacing: -0.03em;
 }
-
+.txt-arrow:before {
+  content: "";
+  display: inline-block;
+  width: 3.5px;
+  height: 9px;
+  background: url(../img/text-arrow.svg) center/contain no-repeat;
+  margin-right: 5px
+}
 .img-adapt {
   position: relative;
   overflow: hidden;
@@ -3802,16 +3809,6 @@ opacity: 0.5;
 }
 .block-info__list {
   margin-bottom: 40px;
-}
-.block-info__list li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.block-info__list li::before{
-  content: "🢒";
-  margin-right: 5px
 }
 .block-info__images {
   display: -webkit-box;
