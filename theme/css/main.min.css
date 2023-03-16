@@ -2957,7 +2957,7 @@ footer .ft-first {
 footer .ft-first .ft-p {
   font-size: 12px;
   line-height: 150%;
-  color: #737373;
+  color: #1E2D26;
   margin: 18px 0 0 0;
 }
 
@@ -3599,8 +3599,8 @@ opacity: 0.5;
   color: #1E2D26;
 }
 .item-product:hover {
-  -webkit-box-shadow: 0px 4px 10px rgba(30, 45, 38, 0.25);
-          box-shadow: 0px 4px 10px rgba(30, 45, 38, 0.25);
+  -webkit-box-shadow: 0px 4px 16px rgba(30, 45, 38, 0.5);
+          box-shadow: 0px 4px 16px rgba(30, 45, 38, 0.5);
 }
 
 .ft-products {
