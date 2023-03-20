@@ -3486,7 +3486,8 @@ opacity: 0.5;
 .top-products__item:last-child {
   margin: 0 0px 16px 0;
 }
-.top-products__item:hover .top-products__img {
+.top-products__item:hover .top-products__img,
+.top-products__item.active .top-products__img{
   border: 2px solid #009846;
 }
 .top-products__item:hover .top-products__img img {
