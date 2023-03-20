@@ -3366,7 +3366,6 @@ opacity: 0.5;
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 16px;
-  cursor: pointer
 }
 .item-wisewater:hover {
   color: #fff;
