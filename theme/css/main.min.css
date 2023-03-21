@@ -3366,7 +3366,6 @@ opacity: 0.5;
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 16px;
-  cursor: pointer
 }
 .item-wisewater:hover {
   color: #fff;
@@ -3515,7 +3514,11 @@ opacity: 0.5;
   margin: 0 0px 16px 0;
 }
 .top-products__item:hover .top-products__img,
+<<<<<<< HEAD
 .top-products__item.active .top-products__img {
+=======
+.top-products__item.active .top-products__img{
+>>>>>>> bd297553ed5e7605c723c4cc9472898503dc04a4
   border: 2px solid #009846;
 }
 .top-products__item:hover .top-products__img img {
