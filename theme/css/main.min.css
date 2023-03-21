@@ -3462,7 +3462,35 @@ opacity: 0.5;
   margin-bottom: 14px;
   margin-top: 12px;
 }
-
+.tippy-box {
+  padding: 3px;
+  background: #EDF3DD;
+  border-radius: 6px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #009846;
+}
+.tippy-arrow {
+  color: #EDF3DD;
+}
+.tippy-box[data-animation=scale][data-placement=top]{
+  transform-origin:bottom
+}
+.tippy-box[data-animation=scale][data-placement=bottom]{
+  transform-origin:top
+}
+.tippy-box[data-animation=scale][data-placement=left]{
+  transform-origin:right
+}
+.tippy-box[data-animation=scale][data-placement=right]{
+  transform-origin:left
+}
+.tippy-box[data-animation=scale][data-state=hidden]{
+  transform:scale(.5);opacity:0
+}
 .top-products {
   padding: 37px 0 21px;
   -webkit-box-pack: justify;
@@ -3486,7 +3514,8 @@ opacity: 0.5;
 .top-products__item:last-child {
   margin: 0 0px 16px 0;
 }
-.top-products__item:hover .top-products__img {
+.top-products__item:hover .top-products__img,
+.top-products__item.active .top-products__img {
   border: 2px solid #009846;
 }
 .top-products__item:hover .top-products__img img {
@@ -3979,8 +4008,8 @@ opacity: 0.5;
           align-items: center;
   text-align: center;
 }
-/* pickup poppup */
-.pickup-modal {
+/* poppup */
+.modal{
   display: none;
   padding: 150px 15px 47px;
   background: rgba(0, 0, 0, 0.2);
@@ -3992,11 +4021,11 @@ opacity: 0.5;
   z-index: 1000;
   overflow: scroll;
 }
-.pickup-modal .h1 {
+.modal .h1{
   text-align: center;
   margin-bottom: 10px;
 }
-.pickup-modal__inner {
+.modal__inner{
   padding: 21px 50px 31px;
   background: #fff;
   width: 100%;
@@ -4012,146 +4041,146 @@ opacity: 0.5;
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
   position: relative;
 }
-.pickup-modal.open {
+.modal.open{
   display: block;
 }
-.form-pickup .h2 {
+.modal .h2{
   font-weight: 300;
   margin-bottom: 16px;
 }
-.form-pickup .h2 span {
+.form-modal .h2 span {
   font-weight: 400;
   font-size: 12px;
   opacity: 0.5;
   color: #000000;
   margin-left: 8px;
 }
-.form-pickup__col.flex {
+.form-modal__col.flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 27px;
   padding-top: 20px;
 }
-.form-pickup__item {
+.form-modal__item{
   margin-bottom: 16px;
 }
-.form-pickup__textarea::-webkit-input-placeholder, .form-pickup__inp::-webkit-input-placeholder {
+.form-modal__textarea::-webkit-input-placeholder, .form-modal__inp::-webkit-input-placeholder {
   font-family: "Fira Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #1E2D26;
 }
-.form-pickup__textarea::-moz-placeholder, .form-pickup__inp::-moz-placeholder {
+.form-modal__textarea::-moz-placeholder, .form-modal__inp::-moz-placeholder {
   font-family: "Fira Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #1E2D26;
 }
-.form-pickup__textarea:-ms-input-placeholder, .form-pickup__inp:-ms-input-placeholder {
+.form-modal__textarea:-ms-input-placeholder, .form-modal__inp:-ms-input-placeholder {
   font-family: "Fira Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #1E2D26;
 }
-.form-pickup__textarea::-ms-input-placeholder, .form-pickup__inp::-ms-input-placeholder {
+.form-modal__textarea::-ms-input-placeholder, .form-modal__inp::-ms-input-placeholder {
   font-family: "Fira Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #1E2D26;
 }
-.form-pickup__textarea, .form-pickup__inp, .form-pickup__textarea::placeholder, .form-pickup__inp::placeholder {
+.form-modal__textarea, .form-modal__inp, .form-modal__textarea::placeholder, .form-modal__inp::placeholder {
   font-family: "Fira Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #1E2D26;
 }
-.form-pickup__inp, .form-pickup__textarea {
+.form-modal__inp, .form-modal__textarea {
   width: 100%;
   padding: 10px 16px;
   border: 1px solid #9BAEB5;
   border-radius: 6px;
 }
-.form-pickup__inp::-webkit-input-placeholder, .form-pickup__textarea::-webkit-input-placeholder {
+.form-modal__inp::-webkit-input-placeholder, .form-modal__textarea::-webkit-input-placeholder {
   opacity: 0.5;
 }
-.form-pickup__inp::-moz-placeholder, .form-pickup__textarea::-moz-placeholder {
+.form-modal__inp::-moz-placeholder, .form-modal__textarea::-moz-placeholder {
   opacity: 0.5;
 }
-.form-pickup__inp:-ms-input-placeholder, .form-pickup__textarea:-ms-input-placeholder {
+.form-modal__inp:-ms-input-placeholder, .form-modal__textarea:-ms-input-placeholder {
   opacity: 0.5;
 }
-.form-pickup__inp::-ms-input-placeholder, .form-pickup__textarea::-ms-input-placeholder {
+.form-modal__inp::-ms-input-placeholder, .form-modal__textarea::-ms-input-placeholder  {
   opacity: 0.5;
 }
-.form-pickup__inp::placeholder, .form-pickup__textarea::placeholder {
+.form-modal__inp::placeholder, .form-modal__textarea::placeholder  {
   opacity: 0.5;
 }
-.form-pickup__inp:focus, .form-pickup__textarea:focus {
+.form-modal__inp:focus, .form-modal__textarea:focus  {
   outline: none;
 }
-.form-pickup .form-pickup__inp--number {
+.form-modal .form-modal__inp--number {
   max-width: 177px;
 }
-.form-pickup__item.error .form-pickup__inp {
+.form-modal__item.error .form-modal__inp  {
   border: 1px solid #CC4F27;
 }
-.form-pickup__item.error .form-pickup__item__error {
+.form-modal__item.error .form-modal__item__error  {
   display: block;
 }
-.form-pickup__textarea {
+.form-modal__textarea {
   max-width: 614px;
   margin-bottom: 9px;
   height: 40px;
   overflow: hidden;
   resize: both;
 }
-.form-pickup__inp {
+.form-modal__inp  {
   height: 40px;
   max-width: 300px;
 }
-.form-pickup__inp--number {
+.form-modal__inp--number {
   position: relative;
   top: -16px;
 }
-.form-pickup__link {
+.form-modal__link {
   text-align: center;
   margin-bottom: 11px;
 }
-.form-pickup__txt {
+.form-modal__txt {
   font-size: 12px;
   color: #000000;
   text-align: center;
   margin-bottom: 10px;
 }
-.form-pickup__txt--light {
+.form-modal__txt--light {
   opacity: 0.5;
   margin-bottom: 0;
 }
-.form-pickup__btn {
+.form-modal__btn  {
   padding-left: 48px;
   padding-right: 48px;
 }
-.form-pickup.error .form-pickup__col.flex {
+.form-modal.error .form-modal__col.flex {
   padding-top: 0;
 }
-.form-pickup.error .form-pickup__error {
+.form-modal.error .form-modal__error  {
   display: block;
 }
-.form-pickup__error, .form-pickup__item__error {
+.form-modal__error, .form-modal__item__error {
   display: none;
   font-size: 14px;
   color: #CC4F27;
 }
-.form-pickup__item__error {
+.form-modal__item__error  {
   font-size: 12px;
   margin-top: 8px;
 }
-.form-pickup__error {
+.form-modal__error  {
   text-align: center;
   margin-bottom: 15px;
 }
@@ -4341,7 +4370,29 @@ opacity: 0.5;
       -ms-transform: translateX(150%);
           transform: translateX(150%);
 }
+.feedback-modal__inner {
+  max-width: 476px ;
+}
+.feedback-modal .form-modal__item {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feedback-modal .form-modal__footer{
+  margin-top: 55px;
+}
+.fulfilled-modal .modal__inner,
+.error-modal .modal__inner {
+  max-width: 476px;
+  padding: 95px 63px 102px;
+  background: url(../img/response-logo.svg) left -34px bottom -24px/ 213px 213px no-repeat, #fff;
 
+}
+.response-message {
+  text-align: center;
+  margin-top: 33px;
+  font-size: 18px;
+}
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1700px) {
@@ -5731,25 +5782,32 @@ opacity: 0.5;
     margin: 0 10px 12px 0;
   }
 
-    .advtg-product__items {
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      padding: 0;
-    }
-    .advtg-product__item {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 50%;
-              flex: 0 0 50%;
-      max-width: none;
-      margin-bottom: 34px;
-      padding: 0 15px;
-    }
-      .pickup-modal {
-        padding: 122px 15px 47px;
-      }
-      .pickup-modal__inner {
-        padding: 40px 24px 17px;
-      }
+  .advtg-product__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+  }
+  .advtg-product__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: none;
+    margin-bottom: 34px;
+    padding: 0 15px;
+  }
+  .modal {
+    padding: 122px 15px 47px;
+  }
+  .modal__inner{
+    padding: 40px 24px 17px;
+  }
+  .feedback-modal .form-modal__footer {
+    margin-top: 24px;
+}
+  .fulfilled-modal .modal__inner, .error-modal .modal__inner {
+    padding: 40px 55px 51px;
+    background: url(../img/response-logo.svg) left -19px bottom -36px/ 143px 143px no-repeat, #fff;
+  }    
 }
 @media only screen and (max-width: 850px) {
   .block-info__tec .table-block__item {
@@ -6106,29 +6164,29 @@ opacity: 0.5;
   .top-product__txt {
     margin: 0 0 16px;
   }
-  .form-pickup .h2 {
+  .form-modal .h2{
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 8px;
   }
-  .form-pickup__col.flex {
+  .form-modal__col.flex {
     display: block;
     padding-top: 15px;
   }
-  .form-pickup__item {
+  .form-modal__item {
     margin-bottom: 8px;
   }
-  .form-pickup__item.file-modal {
+  .form-modal__item.file-modal {
     margin-bottom: 30px;
   }
-  .form-pickup__inp {
+  .form-modal__inp{
     max-width: none;
   }
-  .form-pickup.h1 {
+  .form-modal.h1 {
     font-weight: 300;
     line-height: 130%;
   }
-  .form-pickup .h2 {
+  .form-modal .h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6138,7 +6196,7 @@ opacity: 0.5;
             flex-direction: column;
     line-height: 150%;
   }
-  .form-pickup__inp--number {
+  .form-modal__inp--number {
     top: 0px;
   }
   .radio .check-modal__label::after {
@@ -6155,15 +6213,15 @@ opacity: 0.5;
     margin: 26px 0 30px;
   }
 
-  .form-pickup__item.file-modal {
+  .form-modal__item.file-modal {
     padding-top: 8px;
   }
 
-  .form-pickup__link {
+  .form-modal__link {
     margin-bottom: 5px;
   }
 
-  .form-pickup__btn {
+  .form-modal__btn {
     width: 100%;
   }
 
@@ -6219,3 +6277,6 @@ opacity: 0.5;
     margin-bottom: 28px;
   }
 }
+
+
+

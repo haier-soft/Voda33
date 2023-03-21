@@ -29,8 +29,8 @@ if (document.querySelector(".images-product")) {
     },
     observe: true,
     observeParents: true,
-    freeMode: true, 
-    speed: 800 
+    freeMode: true,
+    speed: 800
   })
   let swiperImages = new Swiper(".images-product__slider", {
     slidesPerView: 1,
@@ -39,7 +39,7 @@ if (document.querySelector(".images-product")) {
     spaceBetween: 10,
     thumbs: {
       swiper: swiperSubImages,
-  
+
     },
     speed: 800
   })
@@ -49,13 +49,13 @@ if (document.querySelector(".info-product")) {
   const switchBlock = document.querySelectorAll(".info-product__block")
   const switchItemMobile = document.querySelectorAll(".info-product__navitem--mobile");
   blockSwitch(switchItem, switchBlock)
-  switchItemMobile.forEach((item,idx) => {
-    item.addEventListener("click",()=> {
+  switchItemMobile.forEach((item, idx) => {
+    item.addEventListener("click", () => {
       if (!item.classList.contains("active")) {
-        switchItemMobile.forEach(item =>{
+        switchItemMobile.forEach(item => {
           item.classList.remove("active")
         })
-        switchBlock.forEach(item =>{
+        switchBlock.forEach(item => {
           item.classList.remove("active")
         })
         switchItemMobile[idx].classList.add("active")
@@ -64,70 +64,39 @@ if (document.querySelector(".info-product")) {
         switchItemMobile[idx].classList.remove("active")
         switchBlock[idx].classList.remove("active")
       }
-    })   
+    })
   })
 }
-if (document.querySelector(".pickup-modal")) {
-  const pickupModal = document.querySelector(".pickup-modal");
-  const pickupModalInner = document.querySelector(".pickup-modal__inner");
-  const form = document.querySelector(".form-pickup");
-  let formReg = document.querySelectorAll(".reg");
-  const formFile = document.querySelector(".file-modal__inp")
-  const formFileInner = document.querySelector(".file-modal")
-  let formOpenBtn = document.querySelector(".pickup-openBtn")
-  let formCloseBtn = document.querySelector(".form-pickup__close")
-  let paddingValue = window.innerWidth - document.documentElement.clientWidth + 'px'
-  formOpenBtn.addEventListener("click",()=>{
-    pickupModal.classList.add("open")
-    document.body.style.paddingRight = paddingValue
-    document.body.classList.add("no-scroll");
-    setTimeout(() => {
-      pickupModalInner.style.transform = "rotateX(0deg)"
-     }, 200)
-  })
-  formCloseBtn.addEventListener("click",e => {
-    e.preventDefault()
-    closeModal()
-  })
-  pickupModal.addEventListener("click", e => {
-    if (!pickupModalInner.contains(e.target)) {
-      closeModal()
-    }
-  })
-  function closeModal() {
-    pickupModalInner.style.transform = "rotateX(90deg)"
-      setTimeout(() => {
-        pickupModal.classList.remove("open")
-        document.body.style.paddingRight = '0px'
-        document.body.classList.remove("no-scroll")
-      }, 500)
-  }
-formFile.addEventListener("change", ()=>{
-  let files = formFile.files;
-  for (let i = 0; i < files.length; i++) {
-    let fileName = files[i].name;
-    let fileDiv = document.createElement("div");
-    fileDiv.textContent = fileName
-    fileDiv.classList.add("file-name")
-    formFileInner.append(fileDiv)
-  }
-})
-form.addEventListener("submit", formSend);
-function formSend(event) {
+//  poppup  
+const fulfilledModal = document.querySelector(".fulfilled-modal")
+const errorModal = document.querySelector(".error-modal")
+function formSend(event, form, modal, modalInner) {
   event.preventDefault();
   let error = formValidate(form);
   if (error === 0) {
-    event.target.submit();
     form.classList.remove("error")
-   // alert("Форма отправлена");
+    closeModal(modal, modalInner)
+    setTimeout(() => {
+      openModal(fulfilledModal, fulfilledModal.querySelector(".modal__inner"))
+    }, 500);
+    //otpravlaem zapros
+    // esli otvet neudachniy
+   /*  setTimeout(() => {
+      openModal(errorModal, errorModal.querySelector(".modal__inner"))
+    }, 500); */
+
+    // esli otvet uspeshniy
+    /*  setTimeout(() => {
+      openModal(errorModal, fulfilledModal.querySelector(".modal__inner"))
+    }, 500); */
   } else {
     form.classList.add("error")
-     // alert("Заполните обязательные поля");
   }
 }
 function formValidate(form) {
+  let formReg = form.querySelectorAll(".reg");
   let error = 0;
-  formReg.forEach(function(item) {
+  formReg.forEach(item => {
     formRemoveError(item);
     if (item.classList.contains("phone")) {
       if (!/^((\+7|7|8)([\s\-])?)?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(item.value)) {
@@ -151,7 +120,67 @@ function formRemoveError(item) {
   item.parentElement.classList.remove("error");
   item.classList.remove("error")
 }
- 
+function openModal(modal, modalInner) {
+  let paddingValue = window.innerWidth - document.documentElement.clientWidth + 'px'
+  modal.classList.add("open")
+  document.body.style.paddingRight = paddingValue
+  document.body.classList.add("no-scroll");
+  setTimeout(() => {
+    modalInner.style.transform = "rotateX(0deg)"
+  }, 200)
+}
+function closeModal(modal, modalInner) {
+  modalInner.style.transform = "rotateX(90deg)"
+  setTimeout(() => {
+    modal.classList.remove("open")
+    document.body.style.paddingRight = '0px'
+    document.body.classList.remove("no-scroll")
+  }, 500)
+}
+const modal = document.querySelectorAll(".modal");
+modal.forEach(item => {
+  const modalInner = item.querySelector(".modal__inner");
+  let formCloseBtn = item.querySelector(".icon-close")
+  formCloseBtn.addEventListener("click", e => {
+    closeModal(item, modalInner)
+  })
+  item.addEventListener("click", e => {
+    if (!modalInner.contains(e.target)) {
+      closeModal(item, modalInner)
+    }
+  })
+})
+// pickup-modal
+if (document.querySelector(".pickup-modal")) {
+  const pickupModal = document.querySelector(".pickup-modal");
+  const pickupModalInner = document.querySelector(".pickup-modal__inner");
+  const form = pickupModalInner.querySelector(".form-modal");
+  const formFile = document.querySelector(".file-modal__inp")
+  const formFileInner = document.querySelector(".file-modal")
+  let formOpenBtn = document.querySelector(".pickup-openBtn")
+  formOpenBtn.addEventListener("click", () => openModal(pickupModal, pickupModalInner))
+  formFile.addEventListener("change", () => {
+    let files = formFile.files;
+    for (let i = 0; i < files.length; i++) {
+      let fileName = files[i].name;
+      let fileDiv = document.createElement("div");
+      fileDiv.textContent = fileName
+      fileDiv.classList.add("file-name")
+      formFileInner.append(fileDiv)
+    }
+  })
+  form.addEventListener("submit", event => formSend(event, form, pickupModal, pickupModalInner));
+}
+//feedback-modal
+if (document.querySelector(".feedback-modal")) {
+  const feedbackModal = document.querySelector(".feedback-modal");
+  const pickupModalInner = document.querySelector(".feedback-modal__inner");
+  const form = pickupModalInner.querySelector(".form-modal");
+  let formOpenBtn = document.querySelectorAll(".table-block__item--btn")
+  formOpenBtn.forEach(item => {
+    item.addEventListener("click", () => openModal(feedbackModal, pickupModalInner))
+  })
+  form.addEventListener("submit", event => formSend(event, form, feedbackModal, pickupModalInner));
 }
 window.addEventListener("scroll", () => {
   let windowTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -172,7 +201,7 @@ window.addEventListener("scroll", () => {
       item.style.opacity = "1"
       item.classList.add(animation);
       item.classList.add("animated");
-    } else if (window.innerHeight < offset(item) ) {
+    } else if (window.innerHeight < offset(item)) {
       item.style.cssText += "opacity:0"
       item.classList.remove(animation);
     }
