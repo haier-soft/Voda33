@@ -5783,6 +5783,9 @@ opacity: 0.5;
   .block-info__col.third {
     order: 2
   }
+  .block-info__col img {
+    max-width: 100%;
+  }
   .block-info__col p {
     margin: 0 0 16px;
   }
