@@ -3808,29 +3808,14 @@ opacity: 0.5;
 }
 .block-info__cols {
   display: grid;
-  grid-template-columns: 49% 51%;
-  grid-template-rows: auto 88px auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 20px;
   margin: 0 0px 38px;
 }
 .block-info__col p {
   margin: 0 0 12px;
-  max-width: 540px;
 }
-.block-info__col.first {
-  grid-row: 1/span 2;
-}
-.block-info__col.second {
-  padding-top: 160px;
-  padding-left: 35px;
-  margin-bottom: 118px;
-}
-.block-info__col.third {
-  padding: 0 20px 0 0;
-}
-.block-info__col.four {
-  padding-left: 5px;
-  grid-row: 2/span 2;
-}
+
 .block-info__title {
   font-weight: 300;
   margin: 0 0 8px 0;
@@ -3842,6 +3827,9 @@ opacity: 0.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3858,6 +3846,8 @@ opacity: 0.5;
 .block-info__image img {
   width: 130px;
   height: 130px;
+  border: 6px solid #F5F8FB;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto 18px;
@@ -5781,6 +5771,29 @@ opacity: 0.5;
     margin: 0 10px 12px 0;
   }
 
+  .block-info {
+    padding-top: 23px;
+  }
+  .block-info__cols {
+    grid-template-columns: 1fr;
+    margin: 0 0px 15px;
+  }
+  .block-info__col.third {
+    grid-row: 4/5;
+  }
+  .block-info__col.four {
+    grid-row: 3/4;
+  }
+  .block-info__col p {
+    margin: 0 0 16px;
+  }
+  .block-info__list {
+    margin-bottom: 16px;
+  }
+  .block-info__tec.block-info__tec--mobile {
+    margin-bottom: 0;
+  }
+
   .advtg-product__items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -5823,6 +5836,71 @@ opacity: 0.5;
 }
 /*Small Devices */
 @media only screen and (max-width: 768px) {
+  .block-info__image span {
+    font-size: 14px;
+  }
+  .block-info__image img {
+    width: 100px;
+    height: 100px;
+  }
+  .block-info .block-info__tec--desktop {
+    display: none;
+  }
+  .block-info .block-info__tec--mobile {
+    display: block;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding-top: 14px;
+  }
+  .block-info .block-info__tec--mobile .table-block__row {
+    grid-template-columns: 1fr 0.5fr 111px;
+    gap: 0 10px;
+    margin-bottom: 22px;
+    overflow: hidden;
+  }
+  .block-info .block-info__tec--mobile .table-block__row:last-child {
+    margin-bottom: 0;
+  }
+  .block-info .block-info__tec--mobile .table-block__item {
+    height: auto;
+    min-height: 34px;
+    font-size: 12px;
+    border-right: none;
+    padding: 9px 0;
+  }
+  .block-info .block-info__tec--mobile .table-block__item--value {
+    grid-column: 2/span 2;
+    position: relative;
+  }
+  .block-info .block-info__tec--mobile .table-block__item--value:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  }
+  .block-info .block-info__tec--mobile .table-block__item--value:last-child:after {
+    border-bottom: none;
+  }
+  .block-info .block-info__tec--mobile .table-block__item--name {
+    grid-column: 1/span 2;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding: 6px 0;
+  }
+  .block-info .block-info__tec--mobile .table-block__item--lbl {
+    font-weight: 600;
+    color: #000000;
+    opacity: 0.3;
+  }
+
   .item-wisewater.small,
 .item-wisewater.medium,
 .item-wisewater.large {
@@ -5967,107 +6045,6 @@ opacity: 0.5;
       .info-product__blocks {
         padding-bottom: 38px;
       }
-
-        .block-info__image span {
-          font-size: 14px;
-        }
-        .block-info__image img {
-          width: 100px;
-          height: 100px;
-        }
-        .block-info .block-info__tec--desktop {
-          display: none;
-        }
-        .block-info .block-info__tec--mobile {
-          display: block;
-          border: none;
-          -webkit-box-shadow: none;
-                  box-shadow: none;
-          padding-top: 14px;
-        }
-        .block-info .block-info__tec--mobile .table-block__row {
-          grid-template-columns: 1fr 0.5fr 111px;
-          gap: 0 10px;
-          margin-bottom: 22px;
-          overflow: hidden;
-        }
-        .block-info .block-info__tec--mobile .table-block__row:last-child {
-          margin-bottom: 0;
-        }
-        .block-info .block-info__tec--mobile .table-block__item {
-          height: auto;
-          min-height: 34px;
-          font-size: 12px;
-          border-right: none;
-          padding: 9px 0;
-        }
-        .block-info .block-info__tec--mobile .table-block__item--value {
-          grid-column: 2/span 2;
-          position: relative;
-        }
-        .block-info .block-info__tec--mobile .table-block__item--value:after {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          width: 100vw;
-          border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
-        }
-        .block-info .block-info__tec--mobile .table-block__item--value:last-child:after {
-          border-bottom: none;
-        }
-        .block-info .block-info__tec--mobile .table-block__item--name {
-          grid-column: 1/span 2;
-          font-family: "Roboto";
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 21px;
-          text-transform: uppercase;
-          padding: 6px 0;
-        }
-        .block-info .block-info__tec--mobile .table-block__item--lbl {
-          font-weight: 600;
-          color: #000000;
-          opacity: 0.3;
-        }
-      
-
-        .block-info {
-          padding-top: 23px;
-        }
-        .block-info__cols {
-          grid-template-columns: 1fr;
-          grid-template-rows: repeat(4, auto);
-          margin: 0 0px 15px;
-        }
-        .block-info__col.first {
-          grid-row: 1/2;
-        }
-        .block-info__col.second {
-          padding: 0 12px;
-          margin-bottom: 16px;
-        }
-        .block-info__col.third {
-          grid-row: 4/5;
-        }
-        .block-info__col.four {
-          grid-row: 3/4;
-          padding: 0;
-        }
-        .block-info__col p {
-          margin: 0 0 16px;
-        }
-        .block-info__list {
-          margin-bottom: 16px;
-        }
-        .block-info.third {
-          padding: 3px 0 0px;
-        }
-        .block-info__tec.block-info__tec--mobile {
-          margin-bottom: 0;
-        }
         .table-block {
           margin-bottom: 18px;
         }
