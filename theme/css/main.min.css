@@ -6183,6 +6183,19 @@ opacity: 0.5;
   }
 }
 @media only screen and (max-width: 480px) {
+  .top-products .my-container.flex {
+    width: 100%;
+    padding-bottom: 16px;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .top-products__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+  }
   .item-product__preview {
     padding-top: 131%;
     margin-bottom: 22px;
