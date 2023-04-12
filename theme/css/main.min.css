@@ -6226,6 +6226,14 @@ opacity: 0.5;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-x: scroll;
+    scrollbar-color: #009846 transparent;
+      
+  }
+  .top-products .my-container.flex::-webkit-scrollbar {
+    height: 2px;
+  }
+  .top-products .my-container.flex::-webkit-scrollbar-thumb {
+    background-color: #009846;
   }
   .top-products__item {
     -webkit-box-flex: 0;
