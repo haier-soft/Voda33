@@ -6181,15 +6181,6 @@ opacity: 0.5;
 }
 @media only screen and (max-width: 600px) {
   /*breadcrumbs*/
-  .breadcrumbs {
-    text-align: center;
-  }
-  .breadcrumbs ul {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
   .breadcrumbs ul li:after {
     font-size: 8px;
     margin: 0 13px;
