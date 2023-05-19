@@ -3338,11 +3338,24 @@ opacity: 0.5;
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .fancybox-show-thumbs .fancybox-inner {
   right: 0;
   bottom: 95px;
+}
+.fancybox-thumbs-x>ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.fancybox-thumbs-x>ul li{
+  display: block;
+  flex: 0 0 90px;
+  width: 90px;
+  height: 90px;
 }
 .fancybox-thumbs>ul>li:before {
   border: 0;
