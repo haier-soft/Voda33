@@ -3326,6 +3326,32 @@ opacity: 0.5;
     opacity: 1;
   }
 }
+.fancybox-show-thumbs .fancybox-thumbs {
+  top: auto;
+  width: auto;
+  bottom: 0;
+  left: 0;
+  right : 0;
+  height: 95px;
+  padding: 10px 10px 5px 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.fancybox-show-thumbs .fancybox-inner {
+  right: 0;
+  bottom: 95px;
+}
+.fancybox-thumbs>ul>li:before {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.s-about, .s-services {
+  padding-top: 12px;
+}
 /* new pages styles */
 /*******************************/
 /* WiseWater*/
@@ -5731,6 +5757,46 @@ opacity: 0.5;
     font-size: 20px;
   }
 }
+/*breadcrumbs*/
+.breadcrumbs {
+  margin-bottom: 50px;
+}
+
+.breadcrumbs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.breadcrumbs ul li {
+  color: rgba(30, 45, 38, 0.5);;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.breadcrumbs ul li:after {
+  content: ">>";
+  margin: 0 17px;
+}
+
+.breadcrumbs ul li:last-child:after {
+  display: none;
+}
+
+.breadcrumbs ul li a {
+  color: inherit;
+}
+
+.breadcrumbs ul li a:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
 /*New Styles Adapt */
 /*****************************/
 /* Large Devices */
@@ -5761,6 +5827,14 @@ opacity: 0.5;
 }
 /*Medium Devices */
 @media only screen and (max-width: 992px) {
+  /*breadcrumbs*/
+  .breadcrumbs {
+    margin-bottom: 40px;
+  }
+
+  .breadcrumbs ul li {
+    font-size: 12px;
+  }
   .top-products__img {
     border: 2px solid rgba(30, 45, 38, 0.3);
 }
@@ -6093,6 +6167,21 @@ opacity: 0.5;
             }  
 }
 @media only screen and (max-width: 600px) {
+  /*breadcrumbs*/
+  .breadcrumbs {
+    text-align: center;
+  }
+  .breadcrumbs ul {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .breadcrumbs ul li:after {
+    font-size: 8px;
+    margin: 0 13px;
+  }
+
   .top-products {
     padding: 16px 0 0px;
   }

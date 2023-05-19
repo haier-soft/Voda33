@@ -43,6 +43,12 @@ if (document.querySelector(".images-product")) {
     },
     speed: 800
   })
+  $('[data-fancybox="gallery"]').fancybox({
+    thumbs : {
+      autoStart : true,
+      axis      : 'x'
+    }
+  })
 }
 if (document.querySelector(".info-product")) {
   const switchItem = document.querySelectorAll(".info-product__navitem");
@@ -207,6 +213,7 @@ window.addEventListener("scroll", () => {
     }
   })
 })
+
 
 
 
