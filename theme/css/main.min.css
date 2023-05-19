@@ -3353,9 +3353,9 @@ opacity: 0.5;
 }
 .fancybox-thumbs-x>ul li{
   display: block;
-  flex: 0 0 90px;
-  width: 90px;
-  height: 90px;
+  flex: 0 0 65px;
+  width: 65px;
+  height: 65px;
 }
 .fancybox-thumbs>ul>li:before {
   border: 0;
