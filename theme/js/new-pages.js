@@ -43,7 +43,13 @@ if (document.querySelector(".images-product")) {
     },
     speed: 800
   })
-  $('[data-fancybox="gallery"]').fancybox({
+  $('[data-fancybox="gallery2"]').fancybox({
+    thumbs : {
+      autoStart : true,
+      axis      : 'x'
+    }
+  })
+  $('[data-fancybox="gallery1"]').fancybox({
     thumbs : {
       autoStart : true,
       axis      : 'x'
