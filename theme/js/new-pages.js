@@ -43,6 +43,7 @@ if (document.querySelector(".images-product")) {
     },
     speed: 800
   })
+  $.fancybox.defaults.hash = false;
   $('[data-fancybox="gallery2"]').fancybox({
     thumbs : {
       autoStart : true,
